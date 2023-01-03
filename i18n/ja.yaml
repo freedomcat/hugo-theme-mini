@@ -48,3 +48,4 @@ poweredBy:
 
 publishDateShort:
   other: '{{ .PublishDate.Format "01/02" }}'
+
