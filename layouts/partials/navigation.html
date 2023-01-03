@@ -1,4 +1,5 @@
 <nav class="navigation">
+     <a href="{{ "https://www.freedomcat.com/" | relURL }}">トップ</a>
 
 	{{ if not .IsHome }}
 		<a href="{{ "/" | relURL }}"> <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}{{ i18n "home" }}{{ end }}</a>

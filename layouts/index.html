@@ -11,13 +11,16 @@
           <div>
             <h1 class="title"><a href='{{ .RelPermalink }}'>{{ $title }}</a></h1>
             <div class ="date">
-                <time datetime="{{ .PublishDate }}">{{ i18n "publishDate" . }}</time>  
+                <time datetime="{{ .PublishDate }}">{{ i18n "publishDateFull" . }}</time>  
             </div>
           </div>
 
           {{ if ne .Site.Params.hiddenPostSummaryInHomePage true }}
-              <div class="summary">{{ $summary | plainify | htmlUnescape }}</div>
+              <div class="summary">{{ $summary | plainify | htmlUnescape }}<br>
+              <a href='{{ .RelPermalink }}'>{{ i18n "readMore" . }}</a>
+              </div>
           {{ end }}
+
 
         </section>
     {{ end }}
