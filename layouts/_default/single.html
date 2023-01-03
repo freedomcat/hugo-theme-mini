@@ -1,10 +1,12 @@
 {{ define "main" }}
+{{ partial "profile.html" . }}
 
 <section id="single">
     <h1 class="title">{{ .Title }}</h1>
 
     <div class="tip">
         <time datetime="{{ .PublishDate }}">{{ i18n "publishDateFull" . }}</time>
+        <!--
         <span class="split">
           ·
         </span>
@@ -17,6 +19,7 @@
         <span>
           {{ i18n "minuteRead" . }}
         </span>
+        -->
     </div>
 
     
@@ -24,6 +27,11 @@
         {{ partial "toc.html" . }}
     {{ end }}
 
+    {{ if eq .Params.toc true }}
+        <aside>
+        {{ .TableOfContents }}
+        </aside>
+    {{ end }}
 
     <div class="content">
       {{ .Content }}
