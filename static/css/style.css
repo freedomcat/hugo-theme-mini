@@ -12,11 +12,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #5badf0;
+  color: #5f9ea0;
 }
 
 a:hover {
-  color: #0366d6;
+  color: #006400;
 }
 
 /* markdown content styles */
